@@ -380,7 +380,7 @@ resource "aws_ecs_task_definition" "task_definition" {
   container_definitions    = data.template_file.task_definition_json.rendered
   family                   = "ECS-Lab-Task-definition"
   network_mode             = "bridge"
-  memory                   = "512"
+  memory                   = "612"
   cpu                      = "512"
   requires_compatibilities = ["EC2"]
   task_role_arn            = aws_iam_role.ecs-task-role.arn
