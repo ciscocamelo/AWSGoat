@@ -359,9 +359,9 @@ resource "aws_autoscaling_group" "ecs_asg" {
   name                 = "ECS-lab-asg"
   vpc_zone_identifier  = [aws_subnet.lab-subnet-public-1.id]
   launch_configuration = aws_launch_configuration.ecs_launch_config.name
-  desired_capacity     = 1
+  desired_capacity     = 2
   min_size             = 0
-  max_size             = 1
+  max_size             = 2
 }
 
 resource "aws_ecs_cluster" "cluster" {
